@@ -1,10 +1,18 @@
 request = require("request")
+fs      = require("fs")
 
 describe "goBetween", ->
+  url     = "http://lh3.ggpht.com/zjnnvZZdGfB6zDiluJzoP44dgxn-s_5IzAQpRvhPa1rGpLi2WaaId2VCyWl2B0Mac_ZgZdUIKuR45Iz-iy7WscxCePSsbEgvTBQlf_bE"
 
   describe "POST /upload", ->
     describe "a url and file name are provided", ->
       it "saves an image to the public/images directory", ->
+        request.post("http://localhost:80/upload",
+          url: url
+          imageName: "test.jpg"
+        )
+        fs.exists "../public/images/test.jpg", (exists) ->
+          expect(exists).toBe(true)
 
     describe "an image name is not provided", ->
       it "saves an image to the public/images directory and keeps the name of the remote file", ->
