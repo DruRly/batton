@@ -5,5 +5,8 @@
     "express": "~3.4.8",
     "request": "~2.33.0",
     "jasmine-node": "~1.13.0"
+  },
+  "devDependencies": {
+    "express": "~3.4.8"
   }
 }
