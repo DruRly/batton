@@ -6,10 +6,10 @@ var app     = express();
 app.use(express.bodyParser());
 
 app.post('/upload', function(req, res){
-  var url         = req.body.url;
-  var name        = req.body.name;
-  var imagePath   = './public/images/' + name
-  var writeStream = fs.createWriteStream(imagePath);
+  var url           = req.body.url;
+  var name          = req.body.name;
+  var imagePath     = './public/images/' + name
+  var writeStream   = fs.createWriteStream(imagePath);
   var imageBasePath = req.protocol + "://" + req.get('host') + '/public/images/';
 
   request(url).pipe(writeStream);
