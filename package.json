@@ -1,12 +1,11 @@
 {
-  "name": "go-between",
+  "name": "batton",
   "version": "0.0.1",
   "dependencies": {
     "express": "~3.4.8",
-    "request": "~2.33.0",
-    "jasmine-node": "~1.13.0"
+    "jasmine-node": "~1.13.0",
+    "superagent": "~0.16.0",
+    "request": "~2.33.0"
   },
-  "devDependencies": {
-    "express": "~3.4.8"
-  }
+  "devDependencies": {}
 }
