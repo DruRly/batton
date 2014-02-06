@@ -23,7 +23,6 @@ describe('Batton', function() {
       afterEach(function() {
         fs.unlink('./public/images/test.png', function(err) {
           if (err) throw err;
-          console.log('deleted ./public/images/test.png')
         })
       });
 
