@@ -19,11 +19,10 @@ app.post('/upload', function(req, res){
   request(url).pipe(writeStream);
 
   writeStream.on('open', function(){
-    console.log('created ' + imagePath);
+    console.log('creating ' + imagePath);
   });
 
   writeStream.on('close', function(){
-    console.log(req.body);
     res.send(imageBasePath + name);
   });
 });

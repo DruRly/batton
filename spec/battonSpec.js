@@ -1,7 +1,7 @@
 var superagent = require("superagent");
 var fs         = require("fs");
 
-var url = 'http://lh3.ggpht.com/zjnnvZZdGfB6zDiluJzoP44dgxn-s_5IzAQpRvhPa1rGpLi2WaaId2VCyWl2B0Mac_ZgZdUIKuR45Iz-iy7WscxCePSsbEgvTBQlf_bE'
+var url = 'http://www.drurly.com/images/sinatra_screenshot.png'
 
 describe('Batton', function() {
   describe('POST /upload', function() {
