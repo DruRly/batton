@@ -5,6 +5,10 @@ var app     = express();
 
 app.use(express.bodyParser());
 
+app.configure(function(){
+  app.use('/public', express.static(__dirname + '/public'));
+});
+
 app.post('/upload', function(req, res){
   var url           = req.body.url;
   var name          = req.body.name;

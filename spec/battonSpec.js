@@ -36,6 +36,13 @@ describe('Batton', function() {
         expect(response.text).toBe('http://localhost:5000/public/images/test.png');
       });
 
+      it('makes the image publicly accessible', function(done){
+        superagent.get('http://localhost:5000/public/images/test.png', function(res){
+          expect(res.statusCode).toBe(200);
+          done()
+        });
+      });
+
     })
   });
 });
