@@ -9,7 +9,7 @@ describe('Batton', function() {
       var response;
 
       beforeEach(function(done) {
-        superagent.post('http://localhost:5000/upload')
+        superagent.post('http://localhost:8080/upload')
         .send({
           url: url,
           name: 'test.png'
@@ -33,11 +33,11 @@ describe('Batton', function() {
       });
 
       it('returns the remote location of the image', function(){
-        expect(response.text).toBe('http://localhost:5000/public/images/test.png');
+        expect(response.text).toBe('http://localhost:8080/public/images/test.png');
       });
 
       it('makes the image publicly accessible', function(done){
-        superagent.get('http://localhost:5000/public/images/test.png', function(res){
+        superagent.get('http://localhost:8080/public/images/test.png', function(res){
           expect(res.statusCode).toBe(200);
           done()
         });
